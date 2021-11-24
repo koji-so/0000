@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ref = database.getReference();
-        ref.orderByChild("JANコード").equalTo(4).addChildEventListener(new ChildEventListener() {
+        ref.orderByChild("read").equalTo("JANコード").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String prevChildKey) {
                 System.out.println(dataSnapshot.getKey());
